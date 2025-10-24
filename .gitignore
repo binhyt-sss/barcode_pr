@@ -1,0 +1,113 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+.idea/
+.vscode/
+dist/
+build/
+*.egg-info/
+*.log
+.DS_Store
+Thumbs.db
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-wheel-metadata/
+*.whl
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+venv.bak/
+
+# Pytest / test / coverage
+.pytest_cache/
+.tox/
+.nox/
+coverage.xml
+.coverage
+.coverage.*
+htmlcov/
+
+# Caches and databases
+.cache/
+.mypy_cache/
+.pyre/
+.pytype/
+cython_debug/
+
+# Environment files
+.env
+.env.*
+*.env
+
+# IDE / editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.bak
+.claude/
+
+
+# Jupyter
+.ipynb_checkpoints
+
+# Django
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+
+# Scrapy
+.scrapy
+
+# Sphinx
+docs/_build/
+
+# PyInstaller
+*.spec
+*.manifest
+
+# Misc
+*.log
+*.pot
+*.mo
+
+# Storage (temporary files) - keep template PDF only
+Storage/*.png
+Storage/*.pdf
+!Storage/Thermal_Paper_35_22.pdf
+!Storage/.gitkeep
