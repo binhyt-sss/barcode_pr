@@ -211,7 +211,7 @@ async def process_double_text_barcode(
         return {"Result": "ERROR", "Message": str(e)}
 
 
-@router.post("/freeBARCODEDoubleTextReq")
+@router.post("/fc_itemcode_doubletext_req")
 async def create_barcode_with_double_texts(request: Request, params: FreeBARCODEDoubleTextParams):
     """
     Endpoint tạo và in 3 QR code với 2 text dọc bên trái mỗi QR
@@ -239,9 +239,9 @@ async def create_barcode_with_double_texts(request: Request, params: FreeBARCODE
     # Prepare barcode data với 2 text dọc
     # Layout mong muốn: [Barcode_Text][SideText][QR]
     barcode_data = [
-        (params.Barcode_Text_1, params.Barcode_Text_1, params.SideText2_1),  # (qr_content, text_xa_QR, text_gần_QR)
-        (params.Barcode_Text_2 or "", params.Barcode_Text_2 or "", params.SideText2_2 or ""),
-        (params.Barcode_Text_3 or "", params.Barcode_Text_3 or "", params.SideText2_3 or "")
+        (params.Barcode_Text_1, params.Barcode_Text_1, params.Itemcode_1),  # (qr_content, text_xa_QR, text_gần_QR)
+        (params.Barcode_Text_2 or "", params.Barcode_Text_2 or "", params.Itemcode_2 or ""),
+        (params.Barcode_Text_3 or "", params.Barcode_Text_3 or "", params.Itemcode_3 or "")
     ]
     
     # Process barcodes
