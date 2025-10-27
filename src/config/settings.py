@@ -31,6 +31,13 @@ QR_SIZE_LARGE = 350  # Kích thước lớn cho API mới
 QR_POSITIONS = [(22, 0), (124, 0), (226, 0)]
 MAX_TEXT_LENGTH = 15
 
+# Vertical offset applied only for the endpoint that creates barcodes with
+# two vertical texts (`/api/fc_itemcode_doubletext_req`). Increase this
+# value to move stamped content down. Units are the same units that
+# `pdfstamp.jar` expects (points/pixels depending on template).
+DOUBLE_TEXT_Y_OFFSET = -2.5
+
+
 # PDF Template
 PDF_TEMPLATE = "Thermal_Paper_35_22.pdf"
 

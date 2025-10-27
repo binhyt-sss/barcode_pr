@@ -16,7 +16,8 @@ from ..config.settings import (
     STORAGE_DIR, 
     QR_SIZE, 
     QR_SIZE_LARGE,
-    QR_POSITIONS
+    QR_POSITIONS,
+    DOUBLE_TEXT_Y_OFFSET,
 )
 
 # Create router
@@ -179,9 +180,13 @@ async def process_double_text_barcode(
             image_processor.resize_image(str(qr_image_path), QR_SIZE_LARGE)
             
             # 3. Stamp to PDF
+            # Apply vertical offset specifically for the double-text endpoint so
+            # we can nudge stamped content down without changing global QR_POSITIONS.
+            x_pos, y_pos = position
+            adjusted_position = (x_pos, y_pos + DOUBLE_TEXT_Y_OFFSET)
             output_pdf = pdf_processor.stamp_image_to_pdf(
                 str(qr_image_path),
-                position,
+                adjusted_position,
                 rand_id,
                 str(current_pdf)
             )
